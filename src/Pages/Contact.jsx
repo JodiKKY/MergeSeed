@@ -4,11 +4,12 @@ import { FaFacebook, FaLinkedinIn, FaTwitter, FaWhatsapp } from "react-icons/fa"
 
 const Contact = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-white py-16 px-6 md:px-12">
+    <section className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-white pt-28 md:pt-32 pb-16 px-6 md:px-12">
+
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-          Get in <span className="text-red-600">Touch</span>
+          Get in <span className="text-yellow-400">Touch</span>
         </h2>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
           Have questions or want to work with us? Fill out the form or reach us
@@ -26,7 +27,7 @@ const Contact = () => {
           <div className="space-y-6">
             {/* Address */}
             <div className="flex items-start gap-4">
-              <HiLocationMarker className="text-red-600 text-2xl mt-1" />
+              <HiLocationMarker className="text-yellow-400 text-2xl mt-1" />
               <a
                 href="https://www.google.com/maps?q=Plot+N0.7,+Aadoon+St,+Sahara+Down-Dansoman,+Accra,+Ghana"
                 target="_blank"
@@ -39,35 +40,29 @@ const Contact = () => {
 
             {/* Phones */}
             <div className="flex items-center gap-3">
-              <HiPhone className="text-red-600 text-xl" />
+              <HiPhone className="text-yellow-400 text-xl" />
               <div className="flex flex-wrap gap-2 text-gray-700">
-                <a href="tel:+233302303334" className="hover:underline">
-                  +233 30 230 3334
+                <a href="tel:+233244826788" className="hover:underline">
+                  ++233 244 826 788
                 </a>
                 <span className="text-gray-400">|</span>
-                <a href="tel:+233302306016" className="hover:underline">
-                  030 230 6016
+                <a href="tel:+233208195530" className="hover:underline">
+                  020 819 5530
                 </a>
               </div>
             </div>
 
             {/* Emails */}
             <div className="flex items-center gap-4">
-              <HiMail className="text-red-600 text-2xl" />
+              <HiMail className="text-yellow-400 text-2xl" />
               <div className="flex flex-wrap gap-2 text-gray-700">
                 <a
-                  href="mailto:info@jokams.com"
+                  href="mailto:mergeseed@gmail.com"
                   className="hover:underline whitespace-nowrap"
                 >
-                  info@jokams.com
+                  mergeseed@gmail.com
                 </a>
-                <span className="text-gray-400">|</span>
-                <a
-                  href="mailto:jokamslimited@gmail.com"
-                  className="hover:underline whitespace-nowrap"
-                >
-                  jokamslimited@gmail.com
-                </a>
+                
               </div>
             </div>
           </div>
@@ -77,21 +72,21 @@ const Contact = () => {
             <a
               href="https://web.facebook.com/people/Jokams-Limited/100084471634654/"
               aria-label="Facebook"
-              className="w-10 h-10 flex items-center justify-center bg-red-600 text-white rounded-full hover:bg-red-700 hover:scale-105 transition"
+              className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
               <FaFacebook />
             </a>
             <a
               href="https://wa.me/233208762708"
               aria-label="Whatsapp"
-              className="w-10 h-10 flex items-center justify-center bg-red-600 text-white rounded-full hover:bg-red-700 hover:scale-105 transition"
+              className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
               <FaWhatsapp />
             </a>
             <a
               href="https://www.linkedin.com/company/jokams-limited/"
               aria-label="LinkedIn"
-              className="w-10 h-10 flex items-center justify-center bg-red-600 text-white rounded-full hover:bg-red-700 hover:scale-105 transition"
+              className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
               <FaLinkedinIn />
             </a>
@@ -107,27 +102,27 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
             />
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
             />
           </div>
           <input
             type="text"
             placeholder="Subject"
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
           />
           <textarea
             rows="5"
             placeholder="Your Message"
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500 transition"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
           ></textarea>
           <button
             type="submit"
-            className="w-full bg-red-600 text-white font-semibold py-3 rounded-lg hover:bg-red-700 hover:scale-105 transition"
+            className="w-full bg-yellow-400 text-white font-semibold py-3 rounded-lg hover:bg-yellow-700 hover:scale-105 transition"
           >
             Send Message
           </button>
