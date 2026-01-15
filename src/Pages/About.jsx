@@ -1,9 +1,11 @@
 // src/pages/About.jsx
 import React from "react";
-import { FaBullseye, FaEye } from "react-icons/fa";
+import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImg from "../assets/logo.jpg";
+
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -81,6 +83,10 @@ const About = () => {
               title: "Our Vision",
               desc: "We aim to create thriving rural communities where entrepreneurship flourishes and every person, regardless of background, has the opportunity to succeed.",
             },
+            {
+              icon: <FaHandshake className="text-5xl text-yellow-400" />,
+              title: "Our Belief",
+              desc: "At MERGE Seed, we believe access to finance is the seed of growth.  When people are empowered with capital, skills, and confidence, they transform their businesses, families, and communities. Sustainable development begins with empowered entrepreneurs."},
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -102,27 +108,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Belief */}
-      <section className="bg-[#fafafa] py-24 px-6 md:px-16">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="max-w-6xl mx-auto text-center"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
-            Our Belief
-          </h2>
-          <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            At MERGE Seed, we believe access to finance is the seed of growth.
-            When people are empowered with capital, skills, and confidence, they
-            transform their businesses, families, and communities. Sustainable
-            development begins with empowered entrepreneurs.
-          </p>
-        </motion.div>
-      </section>
 
       {/* Management Section Placeholder */}
       <section className="py-24 px-6 md:px-16 bg-white">
