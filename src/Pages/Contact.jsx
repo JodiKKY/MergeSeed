@@ -34,7 +34,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="hover:underline text-gray-700"
               >
-                Plot N0.7, Aadoon St. Sahara Down-Dansoman, Accra, Ghana
+                South Lokoe - Diamond Street,Ho
               </a>
             </div>
 

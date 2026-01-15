@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import heroImage from "../assets/logo.jpg";
 import volunteerImage from "../assets/micro2.jpg"; 
-import impactImage from "../assets/Impact.png";
+import impactImage from "../assets/merge22.png";
 
 // Simple Button Component
 const Button = ({ children, className = "", variant, ...props }) => {
@@ -191,7 +191,7 @@ const Homepage = () => {
       </motion.div>
       </section>
       {/*Outreach & Impact Section */}
-     <section className="bg-[#fafafa] py-24 sm:py-32">
+     <section className="bg-[#ffffff] py-24 sm:py-32">
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
