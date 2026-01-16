@@ -14,13 +14,13 @@ const Navbar = () => {
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition"
+          className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition "
           aria-label="Merge Home"
         >
           <img
             src={Logo}
             alt="Merge Logo"
-            className="h-10 w-auto object-contain hidden md:block"
+            className="h-10 w-auto object-contain hidden md:block rounded-full"
           />
           <span className="font-bold text-xs sm:text-lg text-yellow-400">
             MERGE SEED
