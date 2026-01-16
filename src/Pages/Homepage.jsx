@@ -235,7 +235,7 @@ const Homepage = () => {
               
               </div>
                </motion.div>
-   <motion.div
+            <motion.div
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
@@ -247,7 +247,7 @@ const Homepage = () => {
                   We promote girl-child education, skills development, and reproductive health awareness to build confident and independent individuals. 
                   Through training, mentorship, and community partnerships, we help transform lives and strengthen rural livelihoods.<br />
                   <br />
-                   <Link to="/about" 
+                   <Link to="/projects" 
                    className="inline-block bg-yellow-400 rounded-full px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm text-black hover:bg-yellow-500 transition">
                     Know More
                   </Link>
@@ -259,6 +259,22 @@ const Homepage = () => {
           </div>
         </motion.div>
       </section>
+      <section className="py-24 px-6 bg-gray-50">
+  <div className="max-w-4xl mx-auto bg-yellow-50 border-l-4 border-yellow-400 p-8 rounded-lg shadow-md text-center">
+    <p className="text-gray-700 text-lg leading-relaxed mb-6">
+      MERGE Seed finances its lending activities primarily through the owner’s capital contributions. 
+      In addition, it mobilizes interest-earning funds from Financial Institutions and high-net-worth individuals 
+      to leverage its relatively small capital base. In this regard, MERGE Seed invites you to support its cause in any appropriate form.
+    </p>
+
+    <Link
+      to="/about"
+      className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full transition duration-300"
+    >
+      For Enquires
+    </Link>
+  </div>
+</section>
     </div>
   );
 };
