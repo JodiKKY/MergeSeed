@@ -1,16 +1,43 @@
 // src/pages/About.jsx
 import React from "react";
 import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
+import { HiOutlineCash, HiUsers, HiHome, HiLightBulb, HiBookOpen } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImg from "../assets/logo.jpg";
-
-
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
+
+const products = [
+  {
+    icon: <HiOutlineCash className="text-4xl text-yellow-400" />,
+    title: "Individual MSME Loans",
+    desc: "Working capital support for women and youth-led micro-enterprises to help them grow and scale sustainably.",
+  },
+  {
+    icon: <HiUsers className="text-4xl text-yellow-400" />,
+    title: "Solidarity Group Loans",
+    desc: "Group-based credit with mutual guarantee for micro-entrepreneurs to encourage collaboration and accountability.",
+  },
+  {
+    icon: <HiHome className="text-4xl text-yellow-400" />,
+    title: "Home Improvement, Water & Sanitation Loans",
+    desc: "Credit for household upgrades and basic amenities, improving living conditions for rural communities.",
+  },
+  {
+    icon: <HiLightBulb className="text-4xl text-yellow-400" />,
+    title: "Business Development Services",
+    desc: "Affordable training and coaching in entrepreneurship, finance, and operations to strengthen small businesses.",
+  },
+  {
+    icon: <HiBookOpen className="text-4xl text-yellow-400" />,
+    title: "Financial Literacy",
+    desc: "Programs that help entrepreneurs build sustainable livelihoods and responsible trading practices.",
+  },
+];
 
 const About = () => {
   return (
@@ -108,6 +135,32 @@ const About = () => {
         </div>
       </section>
 
+      {/* Products & Services Section */}
+      <section className="py-24 px-6 md:px-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+            Our Products & Services
+          </h2>
+          <p className="text-gray-700 max-w-2xl mx-auto text-lg md:text-xl">
+            MERGE Seed offers a range of financial products and development services tailored to empower rural entrepreneurs and communities.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {products.map((product, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start gap-4 hover:shadow-2xl transition"
+            >
+              <div className="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full">
+                {product.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800">{product.title}</h3>
+              <p className="text-gray-600">{product.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Management Section Placeholder */}
       <section className="py-24 px-6 md:px-16 bg-white">
