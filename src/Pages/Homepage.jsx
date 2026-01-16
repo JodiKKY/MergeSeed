@@ -138,6 +138,15 @@ const Homepage = () => {
             Unlocking the potential of rural Ghana, one entrepreneur at a time.
           </motion.p>
         </motion.div>
+        <div className="flex justify-center mt-12">
+    <Link
+      to="/about"
+      className="inline-block px-8 py-3 border-2 border-yellow-400 text-yellow-400 rounded-full 
+                 hover:bg-yellow-400 hover:text-white font-semibold text-base transition duration-300"
+    >
+      View More →
+    </Link>
+  </div>
       </section>
 
       { /* Products & Services Section */}
