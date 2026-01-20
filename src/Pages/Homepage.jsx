@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroImage from "../assets/logo.jpg";
+import heroImage from "../assets/hero.png";
 import volunteerImage from "../assets/micro2.jpg"; 
 import impactImage from "../assets/merge22.png";
 
@@ -42,7 +42,7 @@ const Homepage = () => {
 
         <div className="relative max-w-4xl mx-auto text-white z-10">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl flex flex-wrap justify-center gap-2 sm:gap-3">
-            Spreading{" "}
+            {"Financial Inclusion for all "}
             <span className="text-yellow-400">
               Unlocking the potential of rural Ghana, one entrepreneur at a time.
             </span>
@@ -62,7 +62,7 @@ const Homepage = () => {
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
             >
-              <Link to="/">
+              <Link to="/contact">
                 <Button>Join Us</Button>
               </Link>
             </motion.div>
@@ -150,7 +150,7 @@ const Homepage = () => {
       </section>
 
       { /* Products & Services Section */}
-      <section className="bg-black  py-24 sm:py-32">
+      <section className="bg-gray-500 py-24 sm:py-32">
          <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -163,7 +163,7 @@ const Homepage = () => {
               Our Products & Services
             </h2>
             <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
-            <p className="mt-4 text-lg text-gray-400">
+            <p className="mt-4 text-lg text-black">
               Supporting entrepreneurs with the finance, skills, 
               and guidance they need to grow sustainable businesses and strengthen their communities.
             </p>
@@ -180,7 +180,7 @@ const Homepage = () => {
 
             <div className="flex flex-col justify-center">
           
-              <p className="mt-4 text-gray-400 text-lg leading-relaxed">
+              <p className="mt-4 text-black text-lg leading-relaxed">
                MERGE Seed provides more than loans.We offer the tools and training entrepreneurs need to succeed. 
                From affordable credit to business coaching and financial literacy, our services support growth at every stage.
                We focus on empowering women and youth-led enterprises to build sustainable livelihoods. 

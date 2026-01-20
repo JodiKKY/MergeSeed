@@ -138,9 +138,10 @@ const About = () => {
       {/* Products & Services Section */}
       <section className="py-24 px-6 md:px-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
             Our Products & Services
           </h2>
+          <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
           <p className="text-gray-700 max-w-2xl mx-auto text-lg md:text-xl">
             MERGE Seed offers a range of financial products and development services tailored to empower rural entrepreneurs and communities.
           </p>

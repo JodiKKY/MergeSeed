@@ -97,7 +97,7 @@ const Contact = () => {
               <FaFacebook />
             </a>
             <a
-              href="https://wa.me/233208762708"
+              href="https://wa.me/233244826788"
               aria-label="Whatsapp"
               className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >

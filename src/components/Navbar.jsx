@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import Logo from "../assets/logo.jpg";
+import Logo from "../assets/mergelogo.png";
 
 const Navbar = () => {
   const activeClass =

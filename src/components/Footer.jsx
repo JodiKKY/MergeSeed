@@ -1,7 +1,7 @@
 import React from "react";
 import { HiLocationMarker, HiMail, HiPhone } from "react-icons/hi";
 import { FaFacebook, FaEnvelope, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
-import Logo from "../assets/logo.jpg"; 
+import Logo from "../assets/mergelogo.png"; 
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
         {/* Logo + Social */}
         <div className="text-center md:text-left">
           <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
-            <img src={Logo} alt="Jokams Logo" className="w-16 h-16 object-contain" />
+            <img src={Logo} alt="Merge Seed Logo" className="w-16 h-16 object-contain" />
             <span className="text-2xl font-bold text-yellow-400">MERGE SEED</span>
           </div>
           <p className="text-gray-600 mb-3">Your trusted chemical distribution partner.</p>
@@ -58,11 +58,10 @@ const Footer = () => {
     </a>
   </div>
 </li>
-{/* 0244826788 / 0208195530/0201391119/0556933264 */}
 
 
 
-            {/* Phone numbers in one line */}
+            
             <li className="flex items-center gap-2">
               <HiPhone className="text-xl text-gray-600" />
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
@@ -78,7 +77,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Useful Links */}
+     
         <div>
           <h3 className="text-gray-900 font-semibold mb-4">Useful Links</h3>
           <ul className="space-y-2">
@@ -86,10 +85,10 @@ const Footer = () => {
               <a href="/about" className="transition hover:text-gray-900">About MergeSeed</a>
             </li>
             <li>
-              <a href="/products" className="transition hover:text-gray-900">Our Services</a>
+              <a href="/about" className="transition hover:text-gray-900">Products & Services</a>
             </li>
             <li>
-              <a href="/safety" className="transition hover:text-gray-900">Gallery</a>
+              <a href="/projects" className="transition hover:text-gray-900">Impact</a>
             </li>
             <li>
               <a href="/contact" className="transition hover:text-gray-900">Reach Out</a>
@@ -97,7 +96,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Working Hours */}
+        
         <div>
           <h3 className="text-gray-900 font-semibold mb-4">Working Hours</h3>
           <ul className="space-y-2">
@@ -107,10 +106,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Footer */}
+      
       <div className="w-full py-5 px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-gray-500 text-center sm:text-left">
         <span className="text-sm sm:text-base">
-          &copy; {new Date().getFullYear()} Jokams Limited. All rights reserved.
+          &copy; {new Date().getFullYear()} MergeSeed. All rights reserved.
         </span>
         <ul className="flex flex-wrap gap-4 justify-center sm:justify-end text-sm">
           <li>
@@ -122,10 +121,6 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Developer Credit */}
-      <div className="w-full py-3 px-4 text-center text-xs text-gray-400 border-t border-gray-200">
-        Developed by <a href="https://osd-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">JodiKKY</a>
-      </div>
     </footer>
   );
 };
