@@ -1,12 +1,12 @@
 // src/Pages/Projects.jsx
 import React from "react";
 import JobCard from "../components/ProjectCard.jsx";
-import project1 from "../assets/Impact.png";
-import project2 from "../assets/ImpactImage.png";
-import project3 from "../assets/micro2.jpg";
-import project4 from "../assets/Impact.png";
-import project5 from "../assets/Impact.png";
-import project6 from "../assets/merge22.png";
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.png";
+import project4 from "../assets/project4.png";
+import project5 from "../assets/project5.jpg";
+import project6 from "../assets/project6.png";
 
 const projects = [
   {

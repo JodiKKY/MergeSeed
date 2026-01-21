@@ -1,14 +1,15 @@
 // src/pages/Homepage.jsx
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroImage from "../assets/hero.png";
-import volunteerImage from "../assets/micro2.jpg"; 
-import impactImage from "../assets/merge22.png";
+import heroImage from "../assets/hero1.png";
+import productImage from "../assets/micro2.jpg";
+import impactImage from "../assets/update3.png";
 
 // Simple Button Component
 const Button = ({ children, className = "", variant, ...props }) => {
-  const baseClass = "px-8 py-4 rounded-full font-semibold transition";
+  const baseClass =
+    "px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300";
   const variantClass =
     variant === "outline"
       ? "border border-white text-white hover:bg-white hover:text-black"
@@ -23,44 +24,43 @@ const Button = ({ children, className = "", variant, ...props }) => {
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
 };
-
-
-
-
 
 const Homepage = () => {
   return (
     <div className="w-full text-gray-800">
-      {/* Hero Section */}
+      
       <section
-        className="relative isolate h-screen flex flex-col justify-center bg-cover bg-center text-center px-6"
+        className="relative isolate min-h-screen flex items-center justify-center bg-cover bg-center px-4 sm:px-6"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
-
-        <div className="relative max-w-4xl mx-auto text-white z-10">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl flex flex-wrap justify-center gap-2 sm:gap-3">
-            {"Financial Inclusion for all "}
-            <span className="text-yellow-400">
+     
+        <div className="absolute inset-0 bg-black/50"></div>
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="relative z-10 max-w-5xl mx-auto text-center text-white"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+            Financial Inclusion for All
+            <span className="block text-yellow-400 mt-2">
               Unlocking the potential of rural Ghana, one entrepreneur at a time.
             </span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl leading-relaxed">
-            At{" "}
-            <span className="font-semibold text-yellow-400">Merge Seed</span>, we
-            are dedicated to empowering rural entrepreneurs. Our programs provide
-            healthcare, learning opportunities, and joy to children across
-            communities in Ghana and beyond.
-          </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <Link to="/contact">
                 <Button>Join Us</Button>
@@ -68,21 +68,22 @@ const Homepage = () => {
             </motion.div>
 
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
               <Link to="/about">
                 <Button variant="outline">
-                  Learn More <span aria-hidden="true" className="ml-2">→</span>
+                  Learn More <span className="ml-2">→</span>
                 </Button>
               </Link>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
-      {/* About Section */}
       <section className="py-24 px-6 md:px-16 bg-gradient-to-b from-white to-gray-50">
         <motion.div
           initial="hidden"
@@ -97,7 +98,7 @@ const Homepage = () => {
           <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
 
           <motion.p
-            className="text-lg md:text-xl text-gray-700 leading-loose text-justify mb-6"
+            className="text-lg md:text-xl text-gray-700 leading-loose mb-6"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -108,18 +109,18 @@ const Homepage = () => {
           </motion.p>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-700 leading-loose text-justify mb-6"
+            className="text-lg md:text-xl text-gray-700 leading-loose mb-6"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Our vision is to build thriving rural communities where
-            entrepreneurship flourishes and every individual has the opportunity
-            to succeed.
+            entrepreneurship flourishes and everyone has the opportunity to
+            succeed.
           </motion.p>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-700 leading-loose text-justify"
+            className="text-lg md:text-xl text-gray-700 leading-loose"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -130,7 +131,7 @@ const Homepage = () => {
           </motion.p>
 
           <motion.p
-            className="font-semibold text-yellow-400 text-center mt-8 text-lg md:text-xl"
+            className="font-semibold text-yellow-400 mt-8 text-lg md:text-xl"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -138,70 +139,19 @@ const Homepage = () => {
             Unlocking the potential of rural Ghana, one entrepreneur at a time.
           </motion.p>
         </motion.div>
+
         <div className="flex justify-center mt-12">
-    <Link
-      to="/about"
-      className="inline-block px-8 py-3 border-2 border-yellow-400 text-yellow-400 rounded-full 
-                 hover:bg-yellow-400 hover:text-white font-semibold text-base transition duration-300"
-    >
-      View More →
-    </Link>
-  </div>
-      </section>
-
-      { /* Products & Services Section */}
-      <section className="bg-gray-500 py-24 sm:py-32">
-         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
-              Our Products & Services
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
-            <p className="mt-4 text-lg text-black">
-              Supporting entrepreneurs with the finance, skills, 
-              and guidance they need to grow sustainable businesses and strengthen their communities.
-            </p>
-          </div>
-
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="relative w-full h-[350px] rounded-2xl overflow-hidden shadow-lg">
-              <img
-                src={volunteerImage}
-                alt="Volunteer helping the community"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-center">
-          
-              <p className="mt-4 text-black text-lg leading-relaxed">
-               MERGE Seed provides more than loans.We offer the tools and training entrepreneurs need to succeed. 
-               From affordable credit to business coaching and financial literacy, our services support growth at every stage.
-               We focus on empowering women and youth-led enterprises to build sustainable livelihoods. 
-               Together, we help communities thrive, one entrepreneur at a time.
-                <br />
-                <br />
-                <Link
+          <Link
             to="/about"
-            className="inline-block text-yellow-400 hover:text-yellow-800 font-semibold text-base transition duration-200"
+            className="inline-block px-8 py-3 border-2 border-yellow-400 text-yellow-400 rounded-full 
+            hover:bg-yellow-400 hover:text-white font-semibold transition duration-300"
           >
-            View More &rarr;
+            View More →
           </Link>
-              </p>
-            </div>
-          </div>
         </div>
-      </motion.div>
       </section>
-      {/*Outreach & Impact Section */}
-     <section className="bg-[#ffffff] py-24 sm:py-32">
 
+      <section className="bg-[#0F172A] py-24 sm:py-32">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -210,76 +160,108 @@ const Homepage = () => {
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-               <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
-              Our Impact
-            </h2>
-            <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
-              <p className="mt-4 text-lg text-gray-600">
-                Our outreach efforts and community impact initiatives are designed to empower rural entrepreneurs and strengthen local economies.
+              <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
+                Our Products & Services
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
+              <p className="mt-4 text-lg text-gray-300">
+                Supporting entrepreneurs with the finance, skills, and guidance
+                they need to grow sustainable businesses.
               </p>
             </div>
 
             <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <motion.div         
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          >
-             <div className="relative w-full h-[400px] rounded-2xl overflow-hidden bg-white">
+              <div className="relative w-full h-[350px] rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={impactImage}
-                  alt="Volunteer helping the community"
+                  src={productImage}
+                  alt="Community support"
                   className="w-full h-full object-cover"
                 />
-              
               </div>
-               </motion.div>
-            <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-    
-        >
-              <div className="flex flex-col justify-center">
-                <p className="mt-4 text-gray-600 text-lg leading-relaxed">MERGE Seed creates lasting change by investing in people and empowering communities beyond financial support. 
-                  We promote girl-child education, skills development, and reproductive health awareness to build confident and independent individuals. 
-                  Through training, mentorship, and community partnerships, we help transform lives and strengthen rural livelihoods.<br />
-                  <br />
-                   <Link to="/projects" 
-                   className="inline-block bg-yellow-400 rounded-full px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm text-black hover:bg-yellow-500 transition">
-                    Know More
-                  </Link>
 
+              <div className="flex flex-col justify-center">
+                <p className="mt-4 text-gray-300 text-lg leading-relaxed">
+                  MERGE Seed provides more than loans. We offer business coaching,
+                  financial literacy, and tools that empower women and youth-led
+                  enterprises to build sustainable livelihoods.
+                  <br />
+                  <br />
+                  <Link
+                    to="/about"
+                    className="text-yellow-400 hover:text-yellow-500 font-semibold"
+                  >
+                    View More →
+                  </Link>
                 </p>
               </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+  
+      <section className="bg-white py-24 sm:py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
+                Our Impact
+              </h2>
+              <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
+              <p className="mt-4 text-lg text-gray-600">
+                Empowering people and strengthening rural communities beyond
+                financial support.
+              </p>
+            </div>
+
+            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+              >
+                <div className="relative w-full h-[400px] rounded-2xl overflow-hidden">
+                  <img
+                    src={impactImage}
+                    alt="Community impact"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                className="flex items-center"
+              >
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  MERGE Seed promotes girl-child education, skills development,
+                  and mentorship programs that build confident and independent
+                  individuals.
+                  <br />
+                  <br />
+                  <Link
+                    to="/projects"
+                    className="inline-block bg-yellow-400 rounded-full px-4 py-2 text-black hover:bg-yellow-500 transition"
+                  >
+                    Know More
+                  </Link>
+                </p>
               </motion.div>
             </div>
           </div>
         </motion.div>
       </section>
-      <section className="py-24 px-6 bg-gray-50">
-  <div className="max-w-4xl mx-auto bg-yellow-50 border-l-4 border-yellow-400 p-8 rounded-lg shadow-md text-center">
-    <p className="text-gray-700 text-lg leading-relaxed mb-6">
-      MERGE Seed finances its lending activities primarily through the owner’s capital contributions. 
-      In addition, it mobilizes interest-earning funds from Financial Institutions and high-net-worth individuals 
-      to leverage its relatively small capital base. In this regard, MERGE Seed invites you to support its cause in any appropriate form.
-    </p>
-
-    <Link
-      to="/about"
-      className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full transition duration-300"
-    >
-      For Enquires
-    </Link>
-  </div>
-</section>
     </div>
   );
 };
 
 export default Homepage;
-
-
-
