@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { FiMenu, FiX } from "react-icons/fi";
 import Logo from "../assets/mergelogo.png";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
