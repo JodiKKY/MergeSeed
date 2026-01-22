@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 import Logo from "../assets/mergelogo.png";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   const activeClass =
     "bg-yellow-400 text-black rounded-full px-2 py-1 sm:px-3 sm:py-1.5 text-[10px] sm:text-xs font-semibold";
+
   const normalClass =
-    "text-[10px] sm:text-xs font-semibold hover:text-yellow-400 transition whitespace-nowrap";
+    "text-[10px] sm:text-xs font-semibold hover:text-yellow-400 transition whitespace-nowrap text-gray-500";
 
   return (
-    <nav className="fixed top-4 inset-x-4 h-14 sm:h-16 bg-background/80 backdrop-blur-md border border-gray-200/50 max-w-7xl mx-auto rounded-full z-50 shadow-lg shadow-gray-900/5">
+    <nav className="fixed top-4 inset-x-4 h-14 sm:h-16 bg-white/10 dark:bg-slate-900/20 backdrop-blur-xl border border-white/20 dark:border-white/10 max-w-7xl mx-auto rounded-full z-50 shadow-lg shadow-black/5">
       <div className="h-full flex items-center justify-between px-3 sm:px-6 lg:px-8">
-        
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition"
+          className="flex items-center gap-2 hover:opacity-80 transition"
           aria-label="Merge Home"
         >
           <img
@@ -28,45 +31,61 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Navigation Links */}
-        <div className="flex items-center gap-1.5 sm:gap-3">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? activeClass : normalClass
-            }
-          >
-            Home
-          </NavLink>
-
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive ? activeClass : normalClass
-            }
-          >
-            About
-          </NavLink>
-
-          <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              isActive ? activeClass : normalClass
-            }
-          >
-            Projects
-          </NavLink>
-
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? activeClass : normalClass
-            }
-          >
-            Contact
-          </NavLink>
+        {/* Desktop Links */}
+        <div className="hidden sm:flex items-center gap-3">
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Projects", path: "/projects" },
+            { name: "Contact", path: "/contact" },
+          ].map((link) => (
+            <NavLink
+              key={link.name}
+              to={link.path}
+              className={({ isActive }) => (isActive ? activeClass : normalClass)}
+            >
+              {link.name}
+            </NavLink>
+          ))}
         </div>
+
+        {/* Mobile Toggle */}
+        <button
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle Menu"
+          className="sm:hidden text-yellow-400 text-xl focus:outline-none"
+        >
+          {open ? <FiX /> : <FiMenu />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown (Glass) */}
+     {/* Mobile Dropdown (Glass, Right-aligned & Smaller) */}
+{open && (
+  <div className="sm:hidden absolute top-[4.2rem] right-4 w-44 bg-white/10 dark:bg-slate-900/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl shadow-lg shadow-black/10 px-3 py-3 space-y-2">
+    {[
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Projects", path: "/projects" },
+      { name: "Contact", path: "/contact" },
+    ].map((link) => (
+      <NavLink
+        key={link.name}
+        to={link.path}
+        onClick={() => setOpen(false)}
+        className={({ isActive }) =>
+          isActive
+            ? "block text-center bg-yellow-400 text-black rounded-full py-1.5 text-xs font-semibold"
+            : "block text-center text-gray-200/90 hover:text-yellow-400 text-xs font-semibold transition"
+        }
+      >
+        {link.name}
+      </NavLink>
+    ))}
+  </div>
+)}
+
+     
     </nav>
   );
 };
