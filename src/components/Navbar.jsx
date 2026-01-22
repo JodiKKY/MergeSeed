@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import Logo from "../assets/mergelogo.png";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -53,14 +54,15 @@ const Navbar = () => {
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle Menu"
-          className="sm:hidden text-yellow-400 text-xl focus:outline-none"
+          className="sm:hidden text-yellow-400 text-xl focus:outline-none mr-3"
         >
-          {open ? <FiX /> : <FiMenu />}
+         {open ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown (Glass) */}
-     {/* Mobile Dropdown (Glass, Right-aligned & Smaller) */}
+    
+     
+{/* Mobile Dropdown */}
 {open && (
   <div className="sm:hidden absolute top-[4.2rem] right-4 w-44 bg-white/10 dark:bg-slate-900/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl shadow-lg shadow-black/10 px-3 py-3 space-y-2">
     {[
@@ -84,9 +86,7 @@ const Navbar = () => {
     ))}
   </div>
 )}
-
-     
-    </nav>
+ </nav>
   );
 };
 
