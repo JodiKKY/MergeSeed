@@ -4,7 +4,8 @@ import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
 import { HiOutlineCash, HiUsers, HiHome, HiLightBulb, HiBookOpen } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImg from "../assets/logo.jpg";
+import heroImg from "../assets/aboutimg.png";
+import heroImg2 from "../assets/aboutimg2.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -13,27 +14,27 @@ const fadeInUp = {
 
 const products = [
   {
-    icon: <HiOutlineCash className="text-4xl text-yellow-400" />,
+    icon: <HiOutlineCash className="text-4xl text-[#d5af0e]" />,
     title: "Individual MSME Loans",
     desc: "Working capital support for women and youth-led micro-enterprises to help them grow and scale sustainably.",
   },
   {
-    icon: <HiUsers className="text-4xl text-yellow-400" />,
+    icon: <HiUsers className="text-4xl text-[#d5af0e]" />,
     title: "Solidarity Group Loans",
     desc: "Group-based credit with mutual guarantee for micro-entrepreneurs to encourage collaboration and accountability.",
   },
   {
-    icon: <HiHome className="text-4xl text-yellow-400" />,
+    icon: <HiHome className="text-4xl text-[#d5af0e]" />,
     title: "Home Improvement, Water & Sanitation Loans",
     desc: "Credit for household upgrades and basic amenities, improving living conditions for rural communities.",
   },
   {
-    icon: <HiLightBulb className="text-4xl text-yellow-400" />,
+    icon: <HiLightBulb className="text-4xl text-[#d5af0e]" />,
     title: "Business Development Services",
     desc: "Affordable training and coaching in entrepreneurship, finance, and operations to strengthen small businesses.",
   },
   {
-    icon: <HiBookOpen className="text-4xl text-yellow-400" />,
+    icon: <HiBookOpen className="text-4xl text-[#d5af0e]" />,
     title: "Financial Literacy",
     desc: "Programs that help entrepreneurs build sustainable livelihoods and responsible trading practices.",
   },
@@ -42,76 +43,81 @@ const products = [
 const About = () => {
   return (
     <div className="font-sans overflow-hidden bg-white">
-
-      {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
-        <motion.img
-          src={heroImg}
-          alt="MERGE Seed Banner"
-          className="absolute inset-0 w-full h-full object-cover"
-          initial={{ scale: 1.2 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        />
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={fadeInUp}
-          className="relative z-10 text-center px-6"
-        >
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-lg">
-            About <span className="text-yellow-400">MERGE Seed</span>
-          </h1>
-          <p className="text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed text-gray-100">
-            Unlocking the potential of rural Ghana, one entrepreneur at a time.
-          </p>
-        </motion.div>
-      </section>
+   
 
       {/* Who We Are */}
-      <section className="py-24 px-6 md:px-16 bg-white">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="max-w-6xl mx-auto text-center"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
-            Who We Are
-          </h2>
-          <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
-            MERGE Seed Micro-Credit Enterprise (MERGE Seed) is a Bank of Ghana–
-            licensed financial institution dedicated to empowering rural
-            entrepreneurs and bridging the financial inclusion gap for
-            underserved communities, especially women and youth.
-          </p>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            We provide affordable micro-credit, business development services,
-            and financial literacy programs that enable small business owners to
-            build sustainable livelihoods and strengthen their communities.
-          </p>
-        </motion.div>
-      </section>
+    <section className="py-24 px-6 md:px-16 bg-white overflow-hidden">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <motion.div
+  initial={{ opacity: 0, x: -40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="relative w-full max-w-sm mx-auto"
+>
+  {/* Main Image (big, tilted left) */}
+  <img
+    src={heroImg}
+    alt="Community empowerment"
+    className="w-full rounded-lg shadow-xl object-cover -rotate-2"
+  />
+
+</motion.div>
+
+
+    
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
+    >
+      <h2 className="text-4xl md:text-5xl font-bold text-[#d5af0e] mb-6">
+        Who We Are
+      </h2>
+
+      <div className="w-20 h-1 bg-[#d5af0e] mb-10 rounded" />
+      <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+        MERGE Seed Micro-Credit Enterprise (MERGE Seed) is a Bank of Ghana–
+        licensed financial institution dedicated to empowering rural
+        entrepreneurs and bridging the financial inclusion gap for underserved
+        communities, especially women and youth.
+      </p>
+
+      <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+        We provide affordable micro-credit, business development services,
+        and financial literacy programs that enable small business owners to
+        build sustainable livelihoods and strengthen their communities.
+      </p>
+
+      <Link
+        to="/about"
+        className="inline-flex items-center justify-center bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-yellow-500 transition"
+      >
+        Learn More
+      </Link>
+    </motion.div>
+
+  </div>
+</section>
+
 
       {/* Mission & Vision */}
       <section className="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-24 px-6 md:px-16">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           {[
             {
-              icon: <FaBullseye className="text-5xl text-yellow-400" />,
+              icon: <FaBullseye className="text-5xl text-[#d5af0e]" />,
               title: "Our Mission",
               desc: "MERGE Seed is more than a lender. We empower people, inspire entrepreneurship, and drive social change by providing access to finance, business training, and financial education while maintaining financial sustainability.",
             },
             {
-              icon: <FaEye className="text-5xl text-yellow-400" />,
+              icon: <FaEye className="text-5xl text-[#d5af0e]" />,
               title: "Our Vision",
               desc: "We aim to create thriving rural communities where entrepreneurship flourishes and every person, regardless of background, has the opportunity to succeed.",
             },
             {
-              icon: <FaHandshake className="text-5xl text-yellow-400" />,
+              icon: <FaHandshake className="text-5xl text-[#d5af0e]" />,
               title: "Our Belief",
               desc: "At MERGE Seed, we believe access to finance is the seed of growth.  When people are empowered with capital, skills, and confidence, they transform their businesses, families, and communities. Sustainable development begins with empowered entrepreneurs."},
           ].map((item, i) => (
@@ -138,10 +144,10 @@ const About = () => {
       {/* Products & Services Section */}
       <section className="py-24 px-6 md:px-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#d5af0e] mb-6">
             Our Products & Services
           </h2>
-          <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
+          <div className="w-20 h-1 bg-[#d5af0e] mx-auto mb-10 rounded" />
           <p className="text-gray-700 max-w-2xl mx-auto text-lg md:text-xl">
             MERGE Seed offers a range of financial products and development services tailored to empower rural entrepreneurs and communities.
           </p>
@@ -172,7 +178,7 @@ const About = () => {
           variants={fadeInUp}
           className="max-w-6xl mx-auto text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#d5af0e] mb-6">
             Our Management
           </h2>
           <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />

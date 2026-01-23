@@ -26,7 +26,7 @@ const Navbar = () => {
             alt="Merge Logo"
             className="h-7 sm:h-9 w-auto object-contain rounded-full"
           />
-          <span className="font-bold text-[10px] sm:text-sm text-yellow-400 whitespace-nowrap">
+          <span className="font-bold text-[10px] sm:text-sm text-[#d5af0e] whitespace-nowrap">
             MERGE SEED
           </span>
         </Link>
