@@ -66,7 +66,7 @@ const Homepage = () => {
     style={{ backgroundImage: `url(${heroImage})` }}
   />
 
-  {/* Optional: subtle continuous movement */}
+
   <motion.div
     animate={{ scale: [1, 1.03, 1] }}
     transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
@@ -74,10 +74,10 @@ const Homepage = () => {
     style={{ backgroundImage: `url(${heroImage})` }}
   />
 
-  {/* Overlay */}
+
   <div className="absolute inset-0 " />
 
-  {/* Content */}
+
   <motion.div
     initial={{ opacity: 0, y: 60 }}
     animate={{ opacity: 1, y: 0 }}
