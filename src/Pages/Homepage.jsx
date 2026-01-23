@@ -1,13 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
 import ProductBannerCard from "../components/ProductBannerCard";
-
 import heroImage from "../assets/herom.png";
-import productImage from "../assets/micro2.jpg";
+import mergelogo from "../assets/mergelogo.png";
 import impactImage from "../assets/1impact.png";
-
 import productLoanImage from "../assets/product1.png";
 import productTrainingImage from "../assets/product2.png";
 import productSupportImage from "../assets/product3.png";
@@ -84,9 +81,9 @@ const Homepage = () => {
     transition={{ duration: 0.9, ease: "easeOut" }}
     className="relative z-10 max-w-3xl text-left text-white"
   >
-    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tight">
+    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight tracking-tight text-yellow-400">
       Financial Inclusion for All
-      <span className="block text-[#d5af0e] mt-2">
+      <span className="block text-white mt-2 text-2xl sm:text-3xl md:text-4xl font-italic font-semibold">
         Unlocking the potential of rural Ghana, one entrepreneur at a time.
       </span>
     </h1>
@@ -132,11 +129,11 @@ const Homepage = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-lg">
+            <div className="flex justify-center mb-8 lg:mb-0">
               <img
-                src={productImage}
+                src={mergelogo}
                 alt="MERGE Seed"
-                className="w-full h-full object-cover"
+                className=" w-full max-w-md mx-auto lg:mx-0 object-contain"
               />
             </div>
 

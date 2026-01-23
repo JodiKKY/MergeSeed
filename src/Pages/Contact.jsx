@@ -11,13 +11,13 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_75irtr3",   // Replace with your EmailJS service ID
-        "template_l8x6ls8",  // Replace with your EmailJS template ID
+        "service_75irtr3",
+        "template_l8x6ls8",
         form.current,
-        "3JPiWa2oAnkoy1TnY"    // Replace with your EmailJS public key
+        "3JPiWa2oAnkoy1TnY"
       )
       .then(
-        (result) => {
+        () => {
           alert("Message sent successfully! Thank you for your interest.");
           form.current.reset();
         },
@@ -33,36 +33,37 @@ const Contact = () => {
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-          Get In<span className="text-yellow-400"> Touch</span>
+          Get In<span className="text-[#d5af0e]"> Touch</span>
         </h2>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          Interested in investing in MERGE Seed? Fill out the form below or reach us
-          through the details provided.
+          Interested in investing in MERGE Seed? Fill out the form below or reach
+          us through the details provided.
         </p>
       </div>
 
       {/* Grid Layout */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* Contact Info */}
-        <div className="bg-white shadow-xl rounded-2xl p-8 transition hover:shadow-2xl">
+        <div className="bg-white shadow-xl rounded-2xl p-8 transition hover:shadow-2xl flex flex-col">
           <h3 className="text-2xl font-semibold text-gray-800 mb-6">
             Contact Information
           </h3>
+
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <HiLocationMarker className="text-yellow-400 text-2xl mt-1" />
+              <HiLocationMarker className="text-[#d5af0e] text-2xl mt-1" />
               <a
                 href="https://www.google.com/maps?q=South+Lokoe+-+Diamond+Street,+Ho,+Ghana"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline text-gray-700"
               >
-                South Lokoe - Diamond Street, Ho, Ghana
+                South Lokoe – Diamond Street, Ho, Ghana
               </a>
             </div>
 
             <div className="flex items-center gap-3">
-              <HiPhone className="text-yellow-400 text-xl" />
+              <HiPhone className="text-[#d5af0e] text-xl" />
               <div className="flex flex-wrap gap-2 text-gray-700">
                 <a href="tel:+233244826788" className="hover:underline">
                   +233 244 826 788
@@ -75,15 +76,13 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center gap-4">
-              <HiMail className="text-yellow-400 text-2xl" />
-              <div className="flex flex-wrap gap-2 text-gray-700">
-                <a
-                  href="mailto:mergeseed@gmail.com"
-                  className="hover:underline whitespace-nowrap"
-                >
-                  mergeseed@gmail.com
-                </a>
-              </div>
+              <HiMail className="text-[#d5af0e] text-2xl" />
+              <a
+                href="mailto:mergeseed@gmail.com"
+                className="hover:underline text-gray-700 whitespace-nowrap"
+              >
+                mergeseed@gmail.com
+              </a>
             </div>
           </div>
 
@@ -92,24 +91,41 @@ const Contact = () => {
             <a
               href="https://web.facebook.com/people/Jokams-Limited/100084471634654/"
               aria-label="Facebook"
-              className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
+              className="w-10 h-10 flex items-center justify-center bg-[#d5af0e] text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
               <FaFacebook />
             </a>
             <a
               href="https://wa.me/233244826788"
               aria-label="Whatsapp"
-              className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
+              className="w-10 h-10 flex items-center justify-center bg-[#d5af0e] text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
               <FaWhatsapp />
             </a>
             <a
               href="https://www.linkedin.com/company/jokams-limited/"
               aria-label="LinkedIn"
-              className="w-10 h-10 flex items-center justify-center bg-yellow-400 text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
+              className="w-10 h-10 flex items-center justify-center bg-[#d5af0e] text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
               <FaLinkedinIn />
             </a>
+          </div>
+
+          {/* Map */}
+          <div className="mt-8">
+            <div className="w-full h-64 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+              <iframe
+                title="MERGE Seed Location"
+                src="https://www.google.com/maps?q=South+Lokoe+-+Diamond+Street,+Ho,+Ghana&output=embed"
+                loading="lazy"
+                className="w-full h-full"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <p className="mt-3 text-sm text-gray-500">
+              Find us on the map — South Lokoe, Diamond Street, Ho.
+            </p>
           </div>
         </div>
 
@@ -123,40 +139,45 @@ const Contact = () => {
             Investor Inquiry Form
           </h3>
           <p className="text-gray-600 mb-4">
-            Please provide your details and investment interest, and our team will get back to you.
+            Please provide your details and investment interest, and our team
+            will get back to you.
           </p>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
               name="name"
               placeholder="Your Name"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
               required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#d5af0e] transition"
             />
             <input
               type="email"
               name="email"
               placeholder="Your Email"
-              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
               required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#d5af0e] transition"
             />
           </div>
+
           <input
             type="text"
             name="company"
             placeholder="Company / Organization"
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#d5af0e] transition"
           />
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Your Investment Interest or Message"
-            className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500 transition"
-            required
-          ></textarea>
+<textarea
+  name="message"
+  placeholder="Your Investment Interest or Message"
+  required
+  className="w-full h-45 md:h-52 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#d5af0e] transition resize-none"
+/>
+
+      
+
           <button
             type="submit"
-            className="w-full bg-yellow-400 text-white font-semibold py-3 rounded-lg hover:bg-yellow-700 hover:scale-105 transition"
+            className="w-full bg-[#d5af0e] text-white font-semibold py-3 rounded-lg hover:bg-yellow-700 hover:scale-105 transition"
           >
             Submit Inquiry
           </button>
