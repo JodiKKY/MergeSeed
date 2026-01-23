@@ -5,7 +5,7 @@ import { HiOutlineCash, HiUsers, HiHome, HiLightBulb, HiBookOpen } from "react-i
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImg from "../assets/aboutimg.png";
-import heroImg2 from "../assets/aboutimg2.png";
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
