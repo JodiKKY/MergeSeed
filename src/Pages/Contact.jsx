@@ -129,11 +129,11 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Investor Contact Form */}
+        {/* Contact Form */}
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="bg-white shadow-xl rounded-2xl p-8 space-y-6 transition hover:shadow-2xl"
+          className="bg-white shadow-xl rounded-2xl p-8 space-y-6 transition hover:shadow-2xl h-full"
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-2">
             Investor Inquiry Form

@@ -90,12 +90,7 @@ const About = () => {
         build sustainable livelihoods and strengthen their communities.
       </p>
 
-      <Link
-        to="/about"
-        className="inline-flex items-center justify-center bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:bg-yellow-500 transition"
-      >
-        Learn More
-      </Link>
+   
     </motion.div>
 
   </div>

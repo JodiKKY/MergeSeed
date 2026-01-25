@@ -35,18 +35,18 @@ const Homepage = () => {
       alt: "MSME Micro Loans",
     },
     {
-      title: "Business\nTraining",
+      title: "Financial\nLiteracy",
       tag: "Service",
-      desc: "Practical skills for sustainability.",
+      desc: "Entrepreneurs build livelihoods.",
       image: productTrainingImage,
       alt: "Business Training",
     },
     {
-      title: "Entrepreneur\nSupport",
-      tag: "Impact",
-      desc: "Coaching for women and youth.",
+      title: "Business\nDevelopment",
+      tag: "Service",
+      desc: "Affordable training and coaching.",
       image: productSupportImage,
-      alt: "Entrepreneur Support",
+      alt: "Affordable training and coaching.",
     },
   ];
 
@@ -130,12 +130,15 @@ const Homepage = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center mb-8 lg:mb-0">
-              <img
-                src={mergelogo}
-                alt="MERGE Seed"
-                className=" w-full max-w-md mx-auto lg:mx-0 object-contain"
-              />
-            </div>
+  <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 shadow-lg shadow-black/10">
+    <img
+      src={mergelogo}
+      alt="MERGE Seed"
+      className="w-full max-w-md object-contain"
+    />
+  </div>
+</div>
+
 
             <div className="flex flex-col justify-center">
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
