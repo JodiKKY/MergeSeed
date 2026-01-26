@@ -8,6 +8,7 @@ import project4 from "../assets/project4.png";
 import project5 from "../assets/project5.jpg";
 import project6 from "../assets/project6.png";
 
+
 const projects = [
   {
     image: project1,
@@ -54,6 +55,7 @@ const projects = [
 ];
 
 const Projects = () => {
+    
   return (
     <section className="min-h-screen bg-gray-100 py-24 px-6">
       {/* Header */}
