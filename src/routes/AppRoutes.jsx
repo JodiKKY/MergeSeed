@@ -12,8 +12,6 @@ function AppRoutes() {
       <Route path="/projects" element={<Projects />} />
       <Route path="/contact" element={<Contact />} />
 
-      {/* fallback */}
-      <Route path="*" element={<Homepage />} />
     </Routes>
   );
 }
