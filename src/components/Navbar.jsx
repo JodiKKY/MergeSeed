@@ -13,12 +13,14 @@ const Navbar = () => {
     "text-[10px] sm:text-sm font-semibold hover:text-[#d5af0e] transition whitespace-nowrap text-gray-200/90";
 
   return (
-<nav className="fixed top-4 inset-x-4 h-14 sm:h-16 
-  bg-black/30 dark:bg-slate-950/40 
-  backdrop-blur-2xl 
-  border border-white/20 dark:border-white/10 
-  max-w-7xl mx-auto rounded-full z-50 
-  shadow-lg shadow-black/20">
+<nav
+  className="fixed top-4 inset-x-4 h-14 sm:h-16
+  bg-gray-900 dark:bg-slate-950
+  border border-gray-700 dark:border-gray-800
+  max-w-7xl mx-auto rounded-full z-50
+  shadow-lg shadow-black/30"
+>
+
 
       <div className="h-full flex items-center justify-between px-3 sm:px-6 lg:px-8">
         {/* Logo */}
