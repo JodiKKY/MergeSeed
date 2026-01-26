@@ -27,29 +27,7 @@ const Contact = () => {
         }
       );
   };
-         const productsAndServices = [
-            {
-              title: "MSME\nMicro Loans",
-              tag: "Product",
-              desc: "Flexible credit solutions for growth.",
-              image: productLoanImage,
-              alt: "MSME Micro Loans",
-            },
-            {
-              title: "Financial\nLiteracy",
-              tag: "Service",
-              desc: "Entrepreneurs build livelihoods.",
-              image: productTrainingImage,
-              alt: "Business Training",
-            },
-            {
-              title: "Business\nDevelopment",
-              tag: "Service",
-              desc: "Affordable training and coaching.",
-              image: productSupportImage,
-              alt: "Affordable training and coaching.",
-            },
-          ];
+      
         
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-white pt-28 md:pt-32 pb-16 px-6 md:px-12">
