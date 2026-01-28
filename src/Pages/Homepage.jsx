@@ -267,7 +267,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ProductBannerCard from "../components/ProductBannerCard";
 
-import heroImage from "../assets/herom.png"; 
+import heroImage from "../assets/herom.png";        
 import heroImageMobile from "../assets/heroMobile.png"; 
 
 import mergelogo from "../assets/mergelogo.png";
@@ -318,72 +318,73 @@ const Homepage = () => {
 
   return (
     <div className="w-full text-gray-800 overflow-x-hidden">
-      {/* ================= HERO ================= */}
-      <section
-        className="
-          relative flex items-center overflow-hidden w-full
-          aspect-[4/5] sm:aspect-[3/4]
-          lg:aspect-auto lg:min-h-screen
-        "
-      >
-        {/* ===== DESKTOP HERO ===== */}
-        <motion.div
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.2, ease: 'easeOut' }}
-          className="absolute inset-0 hidden lg:block bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
 
-        <motion.div
-          animate={{ scale: [1, 1.03, 1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute inset-0 hidden lg:block bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
+    
+ <section
+  className="
+    relative flex items-center overflow-hidden w-full
+    aspect-[3/5] sm:aspect-[3/4]
+    lg:aspect-auto lg:min-h-screen
+  "
+>
+  
+  <motion.div
+    initial={{ scale: 1.1, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    transition={{ duration: 1.2, ease: "easeOut" }}
+    className="absolute inset-0 hidden lg:block bg-cover bg-center"
+    style={{ backgroundImage: `url(${heroImage})` }}
+  />
 
-        {/* ===== MOBILE HERO (FULL WIDTH) ===== */}
-        <motion.div
-          initial={{ scale: 1.05, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="absolute inset-0 lg:hidden bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImageMobile})` }}
-        />
+  <motion.div
+    animate={{ scale: [1, 1.03, 1] }}
+    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute inset-0 hidden lg:block bg-cover bg-center"
+    style={{ backgroundImage: `url(${heroImage})` }}
+  />
 
-        <motion.div
-          animate={{ scale: [1, 1.02, 1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute inset-0 lg:hidden bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImageMobile})` }}
-        />
-        <div className="absolute inset-0" />
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: 'easeOut' }}
-          className="relative z-10 max-w-3xl text-left text-white px-6 sm:px-10"
-        >
-          <h1 className="font-bold leading-tight tracking-tight text-yellow-400 text-2xl sm:text-3xl md:text-6xl">
-            Financial Inclusion for All
-            <span className="block mt-2 text-white font-semibold italic text-base sm:text-lg md:text-4xl">
-              Unlocking the potential of rural Ghana, one entrepreneur at a time.
-            </span>
-          </h1>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
-           
+  <motion.div
+    initial={{ scale: 1.02, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+    className="absolute inset-0 lg:hidden bg-contain bg-no-repeat bg-top"
+    style={{ backgroundImage: `url(${heroImageMobile})` }}
+  />
 
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link to="/about">
-                <Button variant="outline">
-                  Learn More <span className="ml-2">→</span>
-                </Button>
-              </Link>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
+  <motion.div
+    animate={{ scale: [1, 1.01, 1] }}
+    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute inset-0 lg:hidden bg-contain bg-no-repeat bg-top"
+    style={{ backgroundImage: `url(${heroImageMobile})` }}
+  />
+
+  <div className="absolute inset-0" />
+
+
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.9, ease: "easeOut" }}
+    className="relative z-10 max-w-3xl text-left text-white px-6 sm:px-10"
+  >
+    <h1 className="font-bold leading-tight tracking-tight text-yellow-400 text-2xl sm:text-3xl md:text-6xl">
+      Financial Inclusion for All
+      <span className="block mt-2 text-white font-semibold italic text-base sm:text-lg md:text-4xl">
+        Unlocking the potential of rural Ghana, one entrepreneur at a time.
+      </span>
+    </h1>
+
+    <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+      <Link to="/about">
+        <Button variant="outline">
+          Learn More <span className="ml-2">→</span>
+        </Button>
+      </Link>
+    </div>
+  </motion.div>
+</section>
+
 
 
       <section className="bg-gradient-to-b from-white to-gray-50 py-24">
@@ -393,6 +394,7 @@ const Homepage = () => {
           </h2>
         </div>
       </section>
+
 
       <section className="bg-[#0F172A] py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -404,7 +406,6 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* ================= IMPACT ================= */}
       <section className="bg-[#f3f4f6] py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <img
@@ -414,6 +415,7 @@ const Homepage = () => {
           />
         </div>
       </section>
+
     </div>
   );
 };
