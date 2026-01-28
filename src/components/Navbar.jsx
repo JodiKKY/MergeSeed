@@ -71,8 +71,15 @@ const Navbar = () => {
      
 {/* Mobile Dropdown */}
 {open && (
-  <div className="sm:hidden absolute top-[4.2rem] right-4 w-44 bg-white/10 dark:bg-slate-900/20 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-2xl shadow-lg shadow-black/10 px-3 py-3 space-y-2">
-    {[
+ <div
+  className="sm:hidden absolute top-[4.2rem] right-4 w-44
+  bg-gray-900 dark:bg-slate-950
+  border border-gray-700 dark:border-gray-800
+  rounded-2xl
+  shadow-lg shadow-black/30
+  px-3 py-3 space-y-2"
+>
+ {[
       { name: "Home", path: "/" },
       { name: "About", path: "/about" },
       { name: "Projects", path: "/projects" },
