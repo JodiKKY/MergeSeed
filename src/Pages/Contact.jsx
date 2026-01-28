@@ -37,8 +37,7 @@ const Contact = () => {
           Get In<span className="text-[#d5af0e]"> Touch</span>
         </h2>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          Interested in investing in MERGE Seed? Fill out the form below or reach
-          us through the details provided.
+        If you like what we do and interested in supporting us with a grant, donation, loan or internship, please fill out the inquiry form below or reach us through the contact details provided. 
         </p>
       </div>
 
@@ -90,21 +89,21 @@ const Contact = () => {
           {/* Social Links */}
           <div className="mt-8 flex gap-4">
             <a
-              href="https://web.facebook.com/people/Jokams-Limited/100084471634654/"
+              href="https://www.facebook.com/"
               aria-label="Facebook"
               className="w-10 h-10 flex items-center justify-center bg-[#d5af0e] text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
               <FaFacebook />
             </a>
             <a
-              href="https://wa.me/233244826788"
+              href="https://wa.me/"
               aria-label="Whatsapp"
               className="w-10 h-10 flex items-center justify-center bg-[#d5af0e] text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
               <FaWhatsapp />
             </a>
             <a
-              href="https://www.linkedin.com/company/jokams-limited/"
+              href="https://www.linkedin.com/"
               aria-label="LinkedIn"
               className="w-10 h-10 flex items-center justify-center bg-[#d5af0e] text-white rounded-full hover:bg-yellow-700 hover:scale-105 transition"
             >
@@ -137,7 +136,7 @@ const Contact = () => {
           className="bg-white shadow-xl rounded-2xl p-8 space-y-6 transition hover:shadow-2xl h-full"
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-            Investor Inquiry Form
+           Inquiry Form
           </h3>
           <p className="text-gray-600 mb-4">
             Please provide your details and investment interest, and our team

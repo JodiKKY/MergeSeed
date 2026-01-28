@@ -23,15 +23,13 @@ const Footer = () => {
                 MERGE SEED
               </span>
             </div>
-            <p className="text-gray-600 mb-3">
-              Your trusted chemical distribution partner.
-            </p>
+           
             <div className="mt-4 flex justify-center md:justify-start gap-4 text-xl">
               <a href="mailto:jokamslimited@gmail.com" aria-label="Email">
                 <FaEnvelope className="hover:text-gray-900" />
               </a>
               <a
-                href="https://web.facebook.com/people/Jokams-Limited/100084471634654/"
+                href="https://web.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -39,7 +37,7 @@ const Footer = () => {
                 <FaFacebook className="hover:text-gray-900" />
               </a>
               <a
-                href="https://www.linkedin.com/company/jokams-limited/"
+                href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -47,7 +45,7 @@ const Footer = () => {
                 <FaLinkedinIn className="hover:text-gray-900" />
               </a>
               <a
-                href="https://wa.me/233208762708"
+                href="https://wa.me/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
