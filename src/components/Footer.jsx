@@ -74,10 +74,10 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <HiMail className="text-xl text-gray-600" />
                 <a
-                  href="mailto:mergeseed@gmail.com"
+                  href="mailto:info@mergeseed.com"
                   className="hover:underline whitespace-nowrap"
                 >
-                  mergeseed@gmail.com
+                  info@mergeseed.com
                 </a>
               </li>
 

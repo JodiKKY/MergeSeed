@@ -78,10 +78,10 @@ const Contact = () => {
             <div className="flex items-center gap-4">
               <HiMail className="text-[#d5af0e] text-2xl" />
               <a
-                href="mailto:mergeseed@gmail.com"
+                href="mailto:info@mergeseed.com"
                 className="hover:underline text-gray-700 whitespace-nowrap"
               >
-                mergeseed@gmail.com
+                info@mergeseed.com
               </a>
             </div>
           </div>
@@ -168,7 +168,7 @@ const Contact = () => {
           />
 <textarea
   name="message"
-  placeholder="Your Investment Interest or Message"
+  placeholder="Your Message"
   required
   className="w-full h-45 md:h-52 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#d5af0e] transition resize-none"
 />

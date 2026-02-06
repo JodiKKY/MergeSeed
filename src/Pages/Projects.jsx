@@ -4,14 +4,16 @@ import JobCard from "../components/ProjectCard.jsx";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
-import project4 from "../assets/project4.png";
+import project4 from "../assets/project7.png";
 import project5 from "../assets/project5.jpg";
 import project6 from "../assets/project6.png";
+import project7 from "../assets/image.png";
+import project8 from "../assets/image1.png";
 
 
 const projects = [
   {
-    image: project1,
+    image: project7,
     title: "Micro-Enterprise Loans",
     description:
       "This project focuses on providing affordable micro-credit to rural entrepreneurs, especially women and youth. It helps small business owners expand their operations, improve income stability, and build long-term financial independence. By removing financial barriers, MERGE Seed enables sustainable business growth and stronger community development.",
@@ -32,7 +34,7 @@ const projects = [
     tags: ["Agriculture", "Food Security", "Rural Growth"],
   },
   {
-    image: project4,
+    image: project8,
     title: "Women in Business Initiative",
     description:
       "A targeted program that empowers women entrepreneurs through funding, mentorship, and business development support. It aims to close the gender financing gap and promote economic independence for women.",
@@ -46,7 +48,7 @@ const projects = [
     tags: ["Youth", "Innovation", "Startups"],
   },
   {
-    image: project6,
+    image: project4,
     title: "Community Development Outreach",
     description:
       "Beyond finance, MERGE Seed invests in community development programs that support education, health awareness, and skills training. These activities strengthen social structures and promote holistic growth.",
@@ -71,7 +73,7 @@ const Projects = () => {
         </p>
       </div>
 
-      {/* Gallery Grid */}
+      
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {projects.map((project, index) => (
           <JobCard

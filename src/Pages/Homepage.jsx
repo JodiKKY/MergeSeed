@@ -110,13 +110,9 @@ const Homepage = () => {
   animate={{ scale: [1, 1.02, 1] }}
   transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
   className="
-    lg:hidden
-    absolute inset-0
-    w-full h-full
-    object-cover object-top
-    pointer-events-none
+    lg:hidden absolute inset-0 w-full h-full object-cover object-top pointer-events-none
   "
-/>
+  />
   <div className="absolute inset-0 bg-black/20" />
 
   <motion.div

@@ -4,13 +4,17 @@ import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
 import {HiChevronLeft,HiChevronRight,} from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImg from "../assets/aboutimg.png";
+import heroImg from "../assets/heroiii.png";
 import productLoanImage from "../assets/product1.png";
 import productTrainingImage from "../assets/product2.png";
 import productSupportImage from "../assets/product3.png";
 import ProductBannerCard from "../components/ProductBannerCard";
 import productHomeImage from "../assets/productt4.png";
-import productBusinessImage from "../assets/product6.png";  
+import productBusinessImage from "../assets/product6.png"; 
+import ManagementSection from "../components/ManagementSection";
+
+
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -152,7 +156,7 @@ const About = () => {
             variants={fadeInUp}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-[#d5af0e] mb-6">
-              Who We Are
+              About Us
             </h2>
 
             <div className="w-20 h-1 bg-[#d5af0e] mb-10 rounded" />
@@ -289,35 +293,7 @@ const About = () => {
       </section>
 
       {/* Management Section Placeholder */}
-      <section className="py-24 px-6 md:px-16 bg-white">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-          className="max-w-6xl mx-auto text-center"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#d5af0e] mb-6">
-            Our Management
-          </h2>
-          <div className="w-20 h-1 bg-yellow-400 mx-auto mb-10 rounded" />
-          <p className="text-lg md:text-xl text-gray-600 mb-12">
-            Our leadership team is committed to integrity, financial inclusion,
-            and sustainable community development.
-          </p>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 opacity-60">
-            {[1, 2, 3].map((_, i) => (
-              <div
-                key={i}
-                className="h-64 rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center"
-              >
-                <p className="text-gray-400">Management Profile</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+     <ManagementSection />
 
       {/* Call to Action */}
       <section className="relative bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 text-white py-24 px-6 text-center overflow-hidden">
