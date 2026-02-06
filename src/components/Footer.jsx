@@ -131,10 +131,7 @@ const Footer = () => {
           <span className="text-sm sm:text-base">
             &copy; {new Date().getFullYear()} MergeSeed. All rights reserved.
           </span>
-          <ul className="flex flex-wrap gap-4 justify-center sm:justify-end text-sm">
-            <li><a href="/terms" className="hover:text-gray-700">Terms</a></li>
-            <li><a href="/cookies" className="hover:text-gray-700">Cookies</a></li>
-          </ul>
+         
         </div>
       </div>
 

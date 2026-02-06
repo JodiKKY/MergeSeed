@@ -5,7 +5,7 @@ import {HiChevronLeft,HiChevronRight,} from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImg from "../assets/heroiii.png";
-import productLoanImage from "../assets/product1.png";
+import productLoanImage from "../assets/nnnn.png";
 import productTrainingImage from "../assets/product2.png";
 import productSupportImage from "../assets/product3.png";
 import ProductBannerCard from "../components/ProductBannerCard";
