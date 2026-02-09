@@ -9,8 +9,8 @@ import heroImageMobile from "../assets/image copy.png";
 import mergelogo from "../assets/mergelogo.png";
 import impactImage from "../assets/1impact.png";
 import productLoanImage from "../assets/product1.png";
-import productTrainingImage from "../assets/product2.png";
-import productSupportImage from "../assets/product3.png";
+import productTrainingImage from "../assets/image copy 2.png";
+import productSupportImage from "../assets/image copy 4.png";
 
 const Button = ({ children, className = "", variant, ...props }) => {
   const baseClass =
