@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiX } from "react-icons/hi";
 import ceoImage from "../assets/ceo.png";
@@ -14,6 +14,25 @@ const fadeInUp = {
 
 const ManagementSection = () => {
   const [open, setOpen] = useState(false);
+
+  // ✅ Lock background scroll when modal is open
+  useEffect(() => {
+    if (!open) return;
+
+    const originalOverflow = document.body.style.overflow;
+    const originalPaddingRight = document.body.style.paddingRight;
+
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      document.body.style.paddingRight = originalPaddingRight;
+    };
+  }, [open]);
 
   const ceo = {
     name: "Mr. George Tokpo",
@@ -47,7 +66,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
           and sustainable community development.
         </p>
 
-        {/* ================= CEO CARD ================= */}
+        {/* CEO CARD */}
         <motion.button
           onClick={() => setOpen(true)}
           whileHover={{ y: -3 }}
@@ -62,19 +81,14 @@ He holds a Master’s Degree in General Management from the University of Cape C
         >
           {/* MOBILE LAYOUT */}
           <div className="grid grid-cols-[92px_1fr] gap-4 p-4 text-left md:hidden">
-            {/* Mobile circle image */}
             <div className="flex items-start justify-center">
               <img
                 src={ceoImage}
                 alt={ceo.name}
-                className="
-                  w-20 h-20 rounded-full object-cover object-top
-                  border-4 border-white shadow-md
-                "
+                className="w-20 h-20 rounded-full object-cover object-top border-4 border-white shadow-md"
               />
             </div>
 
-            {/* Mobile compact content */}
             <div className="min-w-0">
               <p className="text-[10px] font-semibold text-yellow-500">
                 Chief Executive Officer
@@ -98,9 +112,8 @@ He holds a Master’s Degree in General Management from the University of Cape C
             </div>
           </div>
 
-          {/* DESKTOP LAYOUT (UNCHANGED STYLE) */}
+          {/* DESKTOP LAYOUT */}
           <div className="hidden md:grid md:grid-cols-2 text-left min-h-[320px]">
-            {/* LEFT: IMAGE */}
             <div className="relative bg-gray-100">
               <img
                 src={ceoImage}
@@ -109,7 +122,6 @@ He holds a Master’s Degree in General Management from the University of Cape C
               />
             </div>
 
-            {/* RIGHT: CONTENT */}
             <div className="p-6 sm:p-8 flex flex-col justify-center">
               <p className="text-sm font-semibold text-yellow-500 mb-2">
                 Chief Executive Officer
@@ -148,85 +160,98 @@ He holds a Master’s Degree in General Management from the University of Cape C
         </div>
       </motion.div>
 
+
       {/* ================= MODAL ================= */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            className="fixed inset-0 z-[999] flex items-center justify-center px-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            {/* BACKDROP */}
-            <button
-              onClick={() => setOpen(false)}
-              className="absolute inset-0 bg-black/60"
-              aria-label="Close"
+<AnimatePresence>
+  {open && (
+    <motion.div
+      className="fixed inset-0 z-[999] flex items-center justify-center px-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      {/* BACKDROP */}
+      <button
+        onClick={() => setOpen(false)}
+        className="absolute inset-0 bg-black/60"
+        aria-label="Close"
+      />
+
+      {/* MODAL */}
+      <motion.div
+        initial={{ y: 30, opacity: 0, scale: 0.97 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        exit={{ y: 30, opacity: 0, scale: 0.97 }}
+        transition={{ duration: 0.25 }}
+        className="
+          relative w-full max-w-2xl
+          bg-white rounded-2xl shadow-2xl
+          overflow-hidden
+          max-h-[78vh]
+          flex flex-col
+        "
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close Icon */}
+        <button
+          onClick={() => setOpen(false)}
+          aria-label="Close modal"
+          className="
+            absolute top-3 right-3 z-20
+            h-10 w-10 rounded-full
+            bg-black/70 text-white
+            flex items-center justify-center
+            hover:bg-black transition
+          "
+        >
+          ✕
+        </button>
+
+        {/* Modal Header */}
+        <div className="grid md:grid-cols-2 flex-none">
+          <div className="relative min-h-[180px] bg-gray-200">
+            <img
+              src={ceoImage}
+              alt={ceo.name}
+              className="absolute inset-0 w-full h-full object-cover object-top"
             />
+          </div>
 
-            {/* MODAL */}
-            <motion.div
-              initial={{ y: 30, opacity: 0, scale: 0.97 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
-              exit={{ y: 30, opacity: 0, scale: 0.97 }}
-              transition={{ duration: 0.25 }}
-              className="
-                relative w-full max-w-2xl
-                bg-white rounded-2xl shadow-2xl
-                overflow-hidden
-                max-h-[85vh]
-              "
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Close Icon */}
-              <button
-                onClick={() => setOpen(false)}
-                aria-label="Close modal"
-                className="
-                  absolute top-3 right-3 z-20
-                  h-10 w-10 rounded-full
-                  bg-black/70 text-white
-                  flex items-center justify-center
-                  hover:bg-black transition
-                  focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-200
-                "
-              >
-                <HiX className="text-2xl" />
-              </button>
+          <div className="p-5 sm:p-6">
+            <p className="text-sm font-semibold text-yellow-500">
+              Chief Executive Officer
+            </p>
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-1">
+              {ceo.name}
+            </h3>
+            <p className="text-gray-600 mt-2">{ceo.title}</p>
+          </div>
+        </div>
 
-              {/* Modal Header */}
-              <div className="grid md:grid-cols-2">
-                <div className="relative min-h-[220px] bg-gray-200">
-                  <img
-                    src={ceoImage}
-                    alt={ceo.name}
-                    className="absolute inset-0 w-full h-full object-cover object-top"
-                  />
-                </div>
+        {/* Modal Body */}
+        <div
+          className="
+            flex-1 min-h-0
+            p-5 sm:p-6
+            overflow-y-auto
+            overscroll-contain
+          "
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
+          {ceo.bio.split("\n\n").map((para, i) => (
+            <p key={i} className="text-gray-700 leading-relaxed mb-5">
+              {para}
+            </p>
+          ))}
 
-                <div className="p-5 sm:p-6">
-                  <p className="text-sm font-semibold text-yellow-500">
-                    Chief Executive Officer
-                  </p>
-                  <h3 className="text-3xl font-bold text-gray-900 mt-1">
-                    {ceo.name}
-                  </h3>
-                  <p className="text-gray-600 mt-2">{ceo.title}</p>
-                </div>
-              </div>
+          {/* bottom spacer so last line never clips */}
+          <div className="h-4" />
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
 
-              {/* Modal Body */}
-              <div className="p-5 sm:p-6 max-h-[45vh] overflow-y-auto">
-                {ceo.bio.split("\n\n").map((para, i) => (
-                  <p key={i} className="text-gray-700 leading-relaxed mb-5">
-                    {para}
-                  </p>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };
