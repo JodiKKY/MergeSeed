@@ -4,13 +4,13 @@ import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
 import {HiChevronLeft,HiChevronRight,} from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import AboutImg from "../assets/about.png";
+import AboutImg from "../assets/image copy 2.png";
 import ProductBannerCard from "../components/ProductBannerCard";
 import ManagementSection from "../components/ManagementSection";
 import productLoanImage from "../assets/product1.png";
-import productTrainingImage from "../assets/product2.png";
-import productSupportImage from "../assets/product3.png";
-import productHomeImage from "../assets/product4.png";
+import productTrainingImage from "../assets/image copy 5.png";
+import productSupportImage from "../assets/image copy 2.png";
+import productHomeImage from "../assets/image copy 4.png";
 import productBusinessImage from "../assets/product6.png"; 
 
 
