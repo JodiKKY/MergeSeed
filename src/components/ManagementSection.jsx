@@ -46,7 +46,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
           and sustainable community development.
         </p>
 
-        {/* ================= CEO CARD ================= */}
+        {/* CEO CARD */}
         <motion.button
           onClick={() => setOpen(true)}
           whileHover={{ y: -3 }}
@@ -60,16 +60,12 @@ He holds a Master’s Degree in General Management from the University of Cape C
           "
         >
           <div className="grid md:grid-cols-2 text-left min-h-[320px]">
-            {/* LEFT: IMAGE (head always visible) */}
+            {/* LEFT: IMAGE */}
             <div className="relative bg-gray-100">
               <img
                 src={ceoImage}
                 alt={ceo.name}
-                className="
-                  absolute inset-0
-                  w-full h-full
-                  object-cover object-top
-                "
+                className="absolute inset-0 w-full h-full object-cover object-top"
               />
             </div>
 
@@ -98,7 +94,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
           </div>
         </motion.button>
 
-        {/* ================= SUBORDINATES ================= */}
+        {/* SUBORDINATES */}
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {[1, 2, 3].map((_, i) => (
             <div
@@ -114,7 +110,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
         </div>
       </motion.div>
 
-      {/* ================= CEO MODAL ================= */}
+      {/* ================= MODAL ================= */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -123,36 +119,40 @@ He holds a Master’s Degree in General Management from the University of Cape C
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+            {/* BACKDROP */}
             <button
               onClick={() => setOpen(false)}
               className="absolute inset-0 bg-black/60"
               aria-label="Close"
             />
 
+            {/* MODAL */}
             <motion.div
               initial={{ y: 30, opacity: 0, scale: 0.97 }}
               animate={{ y: 0, opacity: 1, scale: 1 }}
               exit={{ y: 30, opacity: 0, scale: 0.97 }}
               transition={{ duration: 0.25 }}
-              className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden"
+              className="
+                relative w-full max-w-2xl
+                bg-white rounded-2xl shadow-2xl
+                overflow-hidden
+                max-h-[85vh]
+              "
+              onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
               <div className="grid md:grid-cols-2">
-                {/* LEFT: IMAGE (head visible) */}
-                <div className="relative min-h-[320px] bg-gray-200">
+                {/* LEFT: IMAGE */}
+                <div className="relative min-h-[220px] bg-gray-200">
                   <img
                     src={ceoImage}
                     alt={ceo.name}
-                    className="
-                      absolute inset-0
-                      w-full h-full
-                      object-cover object-top
-                    "
+                    className="absolute inset-0 w-full h-full object-cover object-top"
                   />
                 </div>
 
                 {/* RIGHT: Text */}
-                <div className="p-6 sm:p-8">
+                <div className="p-5 sm:p-6">
                   <p className="text-sm font-semibold text-yellow-500">
                     Chief Executive Officer
                   </p>
@@ -166,7 +166,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
               </div>
 
               {/* Modal Body */}
-              <div className="p-6 sm:p-8 max-h-[60vh] overflow-y-auto">
+              <div className="p-5 sm:p-6 max-h-[45vh] overflow-y-auto">
                 {ceo.bio.split("\n\n").map((para, i) => (
                   <p key={i} className="text-gray-700 leading-relaxed mb-5">
                     {para}
@@ -175,10 +175,10 @@ He holds a Master’s Degree in General Management from the University of Cape C
               </div>
 
               {/* Footer */}
-              <div className="p-6 sm:p-8 border-t flex justify-end">
+              <div className="p-5 sm:p-6 border-t flex justify-end">
                 <button
                   onClick={() => setOpen(false)}
-                  className="px-6 py-3 rounded-full bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition"
+                  className="px-5 py-2.5 text-sm rounded-full bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition"
                 >
                   Close
                 </button>
