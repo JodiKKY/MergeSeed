@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { HiX } from "react-icons/hi";
 import ceoImage from "../assets/ceo.png";
 
 const fadeInUp = {
@@ -46,7 +47,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
           and sustainable community development.
         </p>
 
-        {/* CEO CARD */}
+        {/* ================= CEO CARD ================= */}
         <motion.button
           onClick={() => setOpen(true)}
           whileHover={{ y: -3 }}
@@ -59,7 +60,46 @@ He holds a Master’s Degree in General Management from the University of Cape C
             overflow-hidden
           "
         >
-          <div className="grid md:grid-cols-2 text-left min-h-[320px]">
+          {/* MOBILE LAYOUT */}
+          <div className="grid grid-cols-[92px_1fr] gap-4 p-4 text-left md:hidden">
+            {/* Mobile circle image */}
+            <div className="flex items-start justify-center">
+              <img
+                src={ceoImage}
+                alt={ceo.name}
+                className="
+                  w-20 h-20 rounded-full object-cover object-top
+                  border-4 border-white shadow-md
+                "
+              />
+            </div>
+
+            {/* Mobile compact content */}
+            <div className="min-w-0">
+              <p className="text-[10px] font-semibold text-yellow-500">
+                Chief Executive Officer
+              </p>
+
+              <h3 className="mt-1 text-base font-bold text-gray-900 leading-tight truncate">
+                {ceo.name}
+              </h3>
+
+              <p className="mt-1 text-[11px] text-gray-600 leading-snug line-clamp-2">
+                {ceo.title}
+              </p>
+
+              <p className="mt-2 text-[11px] text-gray-600 leading-snug line-clamp-2">
+                {ceo.bio}
+              </p>
+
+              <span className="mt-3 inline-block text-yellow-600 font-semibold text-[11px]">
+                Read full profile →
+              </span>
+            </div>
+          </div>
+
+          {/* DESKTOP LAYOUT (UNCHANGED STYLE) */}
+          <div className="hidden md:grid md:grid-cols-2 text-left min-h-[320px]">
             {/* LEFT: IMAGE */}
             <div className="relative bg-gray-100">
               <img
@@ -102,9 +142,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
               className="h-56 rounded-2xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center opacity-70"
             >
               <p className="text-gray-400 font-medium">Management Staff</p>
-              <p className="text-gray-300 text-sm mt-1">
-                Subordinate Profile
-              </p>
+              <p className="text-gray-300 text-sm mt-1">Subordinate Profile</p>
             </div>
           ))}
         </div>
@@ -140,9 +178,24 @@ He holds a Master’s Degree in General Management from the University of Cape C
               "
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Close Icon */}
+              <button
+                onClick={() => setOpen(false)}
+                aria-label="Close modal"
+                className="
+                  absolute top-3 right-3 z-20
+                  h-10 w-10 rounded-full
+                  bg-black/70 text-white
+                  flex items-center justify-center
+                  hover:bg-black transition
+                  focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-200
+                "
+              >
+                <HiX className="text-2xl" />
+              </button>
+
               {/* Modal Header */}
               <div className="grid md:grid-cols-2">
-                {/* LEFT: IMAGE */}
                 <div className="relative min-h-[220px] bg-gray-200">
                   <img
                     src={ceoImage}
@@ -151,7 +204,6 @@ He holds a Master’s Degree in General Management from the University of Cape C
                   />
                 </div>
 
-                {/* RIGHT: Text */}
                 <div className="p-5 sm:p-6">
                   <p className="text-sm font-semibold text-yellow-500">
                     Chief Executive Officer
@@ -159,9 +211,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
                   <h3 className="text-3xl font-bold text-gray-900 mt-1">
                     {ceo.name}
                   </h3>
-                  <p className="text-gray-600 mt-2">
-                    {ceo.title}
-                  </p>
+                  <p className="text-gray-600 mt-2">{ceo.title}</p>
                 </div>
               </div>
 
@@ -172,16 +222,6 @@ He holds a Master’s Degree in General Management from the University of Cape C
                     {para}
                   </p>
                 ))}
-              </div>
-
-              {/* Footer */}
-              <div className="p-5 sm:p-6 border-t flex justify-end">
-                <button
-                  onClick={() => setOpen(false)}
-                  className="px-5 py-2.5 text-sm rounded-full bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition"
-                >
-                  Close
-                </button>
               </div>
             </motion.div>
           </motion.div>
