@@ -4,14 +4,15 @@ import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
 import {HiChevronLeft,HiChevronRight,} from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import heroImg from "../assets/heroiii.png";
-import productLoanImage from "../assets/nnnn.png";
+import AboutImg from "../assets/about.png";
+import ProductBannerCard from "../components/ProductBannerCard";
+import ManagementSection from "../components/ManagementSection";
+import productLoanImage from "../assets/product1.png";
 import productTrainingImage from "../assets/product2.png";
 import productSupportImage from "../assets/product3.png";
-import ProductBannerCard from "../components/ProductBannerCard";
-import productHomeImage from "../assets/productt4.png";
+import productHomeImage from "../assets/product4.png";
 import productBusinessImage from "../assets/product6.png"; 
-import ManagementSection from "../components/ManagementSection";
+
 
 
 
@@ -143,7 +144,7 @@ const About = () => {
             className="relative w-full max-w-sm mx-auto"
           >
             <img
-              src={heroImg}
+              src={AboutImg}
               alt="Community empowerment"
               className="w-full rounded-lg shadow-xl object-cover -rotate-2"
             />

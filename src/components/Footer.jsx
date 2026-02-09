@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
            
             <div className="mt-4 flex justify-center md:justify-start gap-4 text-xl">
-              <a href="mailto:jokamslimited@gmail.com" aria-label="Email">
+              <a href="mailto:info@mergeseed.com" aria-label="Email">
                 <FaEnvelope className="hover:text-gray-900" />
               </a>
               <a

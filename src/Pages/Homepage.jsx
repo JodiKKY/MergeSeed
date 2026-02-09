@@ -3,13 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ProductBannerCard from "../components/ProductBannerCard";
-
 import heroImage from "../assets/herom.png";
 import heroImageMobile from "../assets/heroMobile.png";
-
 import mergelogo from "../assets/mergelogo.png";
 import impactImage from "../assets/1impact.png";
-import productLoanImage from "../assets/nnnn.png";
+import productLoanImage from "../assets/product1.png";
 import productTrainingImage from "../assets/product2.png";
 import productSupportImage from "../assets/product3.png";
 
