@@ -15,7 +15,7 @@ const fadeInUp = {
 const ManagementSection = () => {
   const [open, setOpen] = useState(false);
 
-  /* ================= SCROLL LOCK ================= */
+  
   useEffect(() => {
     if (!open) return;
 
@@ -131,7 +131,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
         </motion.button>
 
         {/* ================= SUBORDINATES ================= */}
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        {/* <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {[1, 2, 3].map((_, i) => (
             <div
               key={i}
@@ -141,10 +141,10 @@ He holds a Master’s Degree in General Management from the University of Cape C
               <p className="text-gray-300 text-sm">Subordinate Profile</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </motion.div>
 
-      {/* ================= MODAL ================= */}
+    
       <AnimatePresence>
         {open && (
           <motion.div

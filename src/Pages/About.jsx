@@ -12,7 +12,7 @@ import productTrainingImage from "../assets/image copy 5.png";
 import productSupportImage from "../assets/image copy 2.png";
 import productHomeImage from "../assets/image copy 4.png";
 import productBusinessImage from "../assets/product6.png"; 
-
+import aboutImg from "../assets/about1.webp";
 
 
 
@@ -144,7 +144,7 @@ const About = () => {
             className="relative w-full max-w-sm mx-auto"
           >
             <img
-              src={AboutImg}
+              src={aboutImg}
               alt="Community empowerment"
               className="w-full rounded-lg shadow-xl object-cover -rotate-2"
             />
@@ -178,46 +178,54 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-24 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
-          {[
-            {
-              icon: <FaBullseye className="text-5xl text-[#d5af0e]" />,
-              title: "Our Mission",
-              desc: "MERGE Seed is more than a lender. We empower people, inspire entrepreneurship, and drive social change by providing access to finance, business training, and financial education while maintaining financial sustainability.",
-            },
-            {
-              icon: <FaEye className="text-5xl text-[#d5af0e]" />,
-              title: "Our Vision",
-              desc: "We aim to create thriving rural communities where entrepreneurship flourishes and every person, regardless of background, has the opportunity to succeed.",
-            },
-            {
-              icon: <FaHandshake className="text-5xl text-[#d5af0e]" />,
-              title: "Our Belief",
-              desc: "At MERGE Seed, we believe access to finance is the seed of growth. When people are empowered with capital, skills, and confidence, they transform their businesses, families, and communities. Sustainable development begins with empowered entrepreneurs.",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              viewport={{ once: true }}
-              className="p-10 rounded-3xl bg-white/80 backdrop-blur-md shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                {item.icon}
-                <h3 className="text-2xl font-bold text-gray-900">
-                  {item.title}
-                </h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                {item.desc}
-              </p>
-            </motion.div>
-          ))}
+      <section
+  className="relative py-24 px-6 md:px-16 bg-cover bg-center bg-no-repeat"
+  style={{
+    
+  }}
+>
+  
+  <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+  <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+    {[
+      {
+        icon: <FaBullseye className="text-5xl text-[#d5af0e]" />,
+        title: "Our Mission",
+        desc: "MERGE Seed is more than a lender. We empower people, inspire entrepreneurship, and drive social change by providing access to finance, business training, and financial education while maintaining financial sustainability.",
+      },
+      {
+        icon: <FaEye className="text-5xl text-[#d5af0e]" />,
+        title: "Our Vision",
+        desc: "We aim to create thriving rural communities where entrepreneurship flourishes and every person, regardless of background, has the opportunity to succeed.",
+      },
+      {
+        icon: <FaHandshake className="text-5xl text-[#d5af0e]" />,
+        title: "Our Belief",
+        desc: "At MERGE Seed, we believe access to finance is the seed of growth. When people are empowered with capital, skills, and confidence, they transform their businesses, families, and communities. Sustainable development begins with empowered entrepreneurs.",
+      },
+    ].map((item, i) => (
+      <motion.div
+        key={i}
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: i * 0.2 }}
+        viewport={{ once: true }}
+        className="p-10 rounded-3xl bg-white/85 backdrop-blur-xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+      >
+        <div className="flex items-center gap-4 mb-6">
+          {item.icon}
+          <h3 className="text-2xl font-bold text-gray-900">
+            {item.title}
+          </h3>
         </div>
-      </section>
+        <p className="text-gray-700 leading-relaxed text-lg">
+          {item.desc}
+        </p>
+      </motion.div>
+    ))}
+  </div>
+</section>
 
       {/* Products & Services Section */}
       <section className="py-24 px-6 md:px-16 bg-gradient-to-b from-gray-50 to-white">
