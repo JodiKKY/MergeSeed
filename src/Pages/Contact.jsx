@@ -87,7 +87,7 @@ const Contact = () => {
           </div>
 
           {/* Social Links */}
-          <div className="mt-8 flex gap-4">
+          {/* <div className="mt-8 flex gap-4">
             <a
               href="https://www.facebook.com/"
               aria-label="Facebook"
@@ -109,10 +109,10 @@ const Contact = () => {
             >
               <FaLinkedinIn />
             </a>
-          </div>
+          </div> */}
 
           {/* Map */}
-          <div className="mt-8">
+          <div className="mt-24">
             <div className="w-full h-64 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
               <iframe
                 title="MERGE Seed Location"

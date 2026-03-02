@@ -24,7 +24,7 @@ const Footer = () => {
               </span>
             </div>
            
-            <div className="mt-4 flex justify-center md:justify-start gap-4 text-xl">
+            {/* <div className="mt-4 flex justify-center md:justify-start gap-4 text-xl">
               <a href="mailto:info@mergeseed.com" aria-label="Email">
                 <FaEnvelope className="hover:text-gray-900" />
               </a>
@@ -52,7 +52,7 @@ const Footer = () => {
               >
                 <FaWhatsapp className="hover:text-gray-900" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Us */}
