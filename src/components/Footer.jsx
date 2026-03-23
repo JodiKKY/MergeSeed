@@ -86,11 +86,11 @@ const Footer = () => {
                         <HiPhone className="text-xl text-gray-600 mt-1 shrink-0" />
                         {/* Changed flex-row to flex-wrap and removed whitespace-nowrap */}
                         <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                            <a href="tel:+233244826788" className="hover:underline">
-                                024 482 6788
+                            <a href="tel:+233556933264" className="hover:underline">
+                                055 693 3264
                             </a>
                             <span className="text-gray-400">|</span>
-                            <a href="tel:+233208195530" className="hover:underline">
+                            <a href="tel:+233244826788" className="hover:underline">
                                 024 482 6788
                             </a>
                             <span className="text-gray-400">|</span>

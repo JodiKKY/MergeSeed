@@ -65,17 +65,17 @@ const Contact = () => {
             <div className="flex items-center gap-3">
               <HiPhone className="text-[#d5af0e] text-xl" />
               <div className="flex flex-wrap gap-2 text-gray-700">
+                  <a href="tel:+233556933264" className="hover:underline">
+                      055 693 3264
+                  </a>
+                  <span className="text-gray-400">|</span>
                   <a href="tel:+233244826788" className="hover:underline">
                       024 482 6788
                   </a>
                   <span className="text-gray-400">|</span>
-                <a href="tel:+233244826788" className="hover:underline">
-                  024 482 6788
-                </a>
-                <span className="text-gray-400">|</span>
-                <a href="tel:+233208195530" className="hover:underline">
-                  020 819 5530
-                </a>
+                  <a href="tel:+233208195530" className="hover:underline">
+                      020 819 5530
+                  </a>
 
 
               </div>
