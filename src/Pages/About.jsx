@@ -13,6 +13,10 @@ import productSupportImage from "../assets/fin_literacy2.jpg";
 import productHomeImage from "../assets/image copy 4.png";
 import productBusinessImage from "../assets/product6.png"; 
 import aboutImg from "../assets/about1.webp";
+import teamImg1 from "../assets/team.webp";
+import teamImg2 from "../assets/team1.webp";
+import teamImg3 from "../assets/team3.webp";
+import teamImg4 from "../assets/team4.webp";
 
 
 
@@ -303,6 +307,40 @@ const About = () => {
 
       {/* Management Section Placeholder */}
      <ManagementSection />
+
+      {/* Our Team */}
+      <section className="py-24 px-6 md:px-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            className="text-4xl md:text-5xl font-bold text-[#d5af0e] mb-6 text-center"
+          >
+            Our Team
+          </motion.h2>
+          <div className="w-20 h-1 bg-[#d5af0e] mx-auto mb-12 rounded" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          >
+            {[teamImg1, teamImg2, teamImg3, teamImg4].map((img, i) => (
+              <div key={i} className="overflow-hidden rounded-2xl shadow-md">
+                <img
+                  src={img}
+                  alt={`Team photo ${i + 1}`}
+                  className="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* Call to Action */}
       <section className="relative bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 text-white py-24 px-6 text-center overflow-hidden">
