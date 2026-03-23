@@ -56,51 +56,51 @@ const Footer = () => {
           </div>
 
           {/* Contact Us */}
-          <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2">
-                <HiLocationMarker className="text-xl text-gray-600" />
-                <a
-                  href="https://www.google.com/maps?q=South+Lokoe+Diamond+Street+Ho+Ghana"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  South Lokoe – Diamond Street, Ho
-                </a>
-              </li>
 
-              <li className="flex items-center gap-2">
-                <HiMail className="text-xl text-gray-600" />
-                <a
-                  href="mailto:info@mergeseed.com"
-                  className="hover:underline whitespace-nowrap"
-                >
-                  info@mergeseed.com
-                </a>
-              </li>
+            <div>
+                <h3 className="text-gray-900 font-semibold mb-4">Contact Us</h3>
+                <ul className="space-y-3">
+                    <li className="flex items-start gap-2"> {/* Changed items-center to items-start for better alignment with multi-line text */}
+                        <HiLocationMarker className="text-xl text-gray-600 shrink-0" />
+                        <a
+                            href="https://www.google.com/maps?q=South+Lokoe+Diamond+Street+Ho+Ghana"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline"
+                        >
+                            South Lokoe – Diamond Street, Ho
+                        </a>
+                    </li>
 
-              <li className="flex items-center gap-2">
-                <HiPhone className="text-xl text-gray-600" />
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                  <a
-                    href="tel:+233244826788"
-                    className="hover:underline whitespace-nowrap"
-                  >
-                    +233 244 826 788
-                  </a>
-                  <span className="hidden sm:block text-gray-400">|</span>
-                  <a
-                    href="tel:+233208195530"
-                    className="hover:underline whitespace-nowrap"
-                  >
-                    020 819 5530
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </div>
+                    <li className="flex items-center gap-2">
+                        <HiMail className="text-xl text-gray-600 shrink-0" />
+                        <a
+                            href="mailto:info@mergeseed.com"
+                            className="hover:underline break-all"
+                        >
+                            info@mergeseed.com
+                        </a>
+                    </li>
+
+                    <li className="flex items-start gap-2">
+                        <HiPhone className="text-xl text-gray-600 mt-1 shrink-0" />
+                        {/* Changed flex-row to flex-wrap and removed whitespace-nowrap */}
+                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                            <a href="tel:+233244826788" className="hover:underline">
+                                024 482 6788
+                            </a>
+                            <span className="text-gray-400">|</span>
+                            <a href="tel:+233208195530" className="hover:underline">
+                                020 819 5530
+                            </a>
+                            <span className="text-gray-400">|</span>
+                            <a href="tel:+233208195530" className="hover:underline">
+                                020 819 5530
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
           {/* Useful Links */}
           <div>
