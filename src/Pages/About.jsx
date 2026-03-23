@@ -1,5 +1,5 @@
 // src/pages/About.jsx
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
 import {HiChevronLeft,HiChevronRight,} from "react-icons/hi";
 import { motion } from "framer-motion";
@@ -31,6 +31,8 @@ const fadeInUp = {
 };
 
 const About = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const productsAndServices = [
     {
       title: "MSME\nMicro Loans",
@@ -330,17 +332,49 @@ const About = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
           >
             {[teamImg1, teamImg2, teamImg3, teamImg4].map((img, i) => (
-              <div key={i} className="overflow-hidden rounded-2xl shadow-md">
+              <button
+                key={i}
+                onClick={() => setSelectedImage(img)}
+                className="overflow-hidden rounded-2xl shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d5af0e] cursor-zoom-in"
+              >
                 <img
                   src={img}
                   alt={`Team photo ${i + 1}`}
                   className="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
                 />
-              </div>
+              </button>
             ))}
           </motion.div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {selectedImage && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <motion.img
+            src={selectedImage}
+            alt="Team photo enlarged"
+            initial={{ scale: 0.85, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="max-w-full max-h-[90vh] rounded-2xl shadow-2xl object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-5 right-5 text-white text-3xl font-bold leading-none hover:text-[#d5af0e] transition-colors"
+            aria-label="Close"
+          >
+            &times;
+          </button>
+        </motion.div>
+      )}
 
       {/* Call to Action */}
       <section className="relative bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 text-white py-24 px-6 text-center overflow-hidden">
