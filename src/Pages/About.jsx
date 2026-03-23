@@ -9,7 +9,7 @@ import ProductBannerCard from "../components/ProductBannerCard";
 import ManagementSection from "../components/ManagementSection";
 import productLoanImage from "../assets/product1.png";
 import productTrainingImage from "../assets/image copy 5.png";
-import productSupportImage from "../assets/image copy 2.png";
+import productSupportImage from "../assets/fin_literacy2.jpg";
 import productHomeImage from "../assets/image copy 4.png";
 import productBusinessImage from "../assets/product6.png"; 
 import aboutImg from "../assets/about1.webp";
