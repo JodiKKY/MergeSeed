@@ -91,7 +91,7 @@ const Footer = () => {
                             </a>
                             <span className="text-gray-400">|</span>
                             <a href="tel:+233208195530" className="hover:underline">
-                                020 819 5530
+                                024 482 6788
                             </a>
                             <span className="text-gray-400">|</span>
                             <a href="tel:+233208195530" className="hover:underline">
