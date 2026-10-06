@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ProductBannerCard from "../components/ProductBannerCard";
+import WelcomePopup from "../components/WelcomePopup";
 
 import heroImage from "../assets/image.png";
 import heroImageMobile from "../assets/image copy.png";
@@ -11,6 +12,7 @@ import impactImage from "../assets/1impact.png";
 import productLoanImage from "../assets/product1.png";
 import productTrainingImage from "../assets/fin_literacy2.jpg";
 import productSupportImage from "../assets/image copy 4.png";
+import customerServiceWeekImage from "../assets/customer-service-week.jpeg";
 
 const Button = ({ children, className = "", variant, ...props }) => {
   const baseClass =
@@ -54,7 +56,11 @@ const Homepage = () => {
 
   return (
     <div className="w-full text-gray-800 overflow-x-hidden">
-     
+      <WelcomePopup
+        image={customerServiceWeekImage}
+        alt="Happy Customer Service Week - Thank you for being part of our journey"
+      />
+
 <section
   className="
     relative flex items-center overflow-hidden w-full aspect-[3/5] sm:aspect-[3/4] lg:aspect-auto lg:min-h-screen
