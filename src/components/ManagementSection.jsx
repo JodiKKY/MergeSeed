@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiX } from "react-icons/hi";
-import ceoImage from "../assets/ceo.png";
+import ceoImage from "../assets/ceo.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -85,6 +85,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
             <img
               src={ceoImage}
               alt={ceo.name}
+              loading="lazy"
               className="w-20 h-20 rounded-full object-cover object-top border-4 border-white shadow-md"
             />
             <div className="min-w-0">
@@ -109,6 +110,7 @@ He holds a Master’s Degree in General Management from the University of Cape C
               <img
                 src={ceoImage}
                 alt={ceo.name}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
             </div>

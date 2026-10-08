@@ -6,11 +6,11 @@ import { motion, AnimatePresence, MotionConfig, useReducedMotion } from "framer-
 import { Link } from "react-router-dom";
 import ProductBannerCard from "../components/ProductBannerCard";
 import ManagementSection from "../components/ManagementSection";
-import productLoanImage from "../assets/product1.png";
-import productTrainingImage from "../assets/image copy 5.png";
-import productSupportImage from "../assets/fin_literacy2.jpg";
-import productHomeImage from "../assets/image copy 4.png";
-import productBusinessImage from "../assets/product6.png";
+import productLoanImage from "../assets/product1.webp";
+import productTrainingImage from "../assets/image copy 5.webp";
+import productSupportImage from "../assets/fin_literacy2.webp";
+import productHomeImage from "../assets/image copy 4.webp";
+import productBusinessImage from "../assets/product6.webp";
 import aboutImg from "../assets/about1.webp";
 import teamImg1 from "../assets/team.webp";
 import teamImg2 from "../assets/team1.webp";

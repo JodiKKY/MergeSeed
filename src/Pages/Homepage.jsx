@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 import ProductBannerCard from "../components/ProductBannerCard";
 import WelcomePopup from "../components/WelcomePopup";
 
-import heroImage from "../assets/image.png";
-import heroImageMobile from "../assets/image copy.png";
+import heroImage from "../assets/image.webp";
+import heroImageMobile from "../assets/image copy.webp";
 import mergelogo from "../assets/mergelogo.png";
-import impactImage from "../assets/1impact.png";
-import productLoanImage from "../assets/product1.png";
-import productTrainingImage from "../assets/fin_literacy2.jpg";
-import productSupportImage from "../assets/image copy 4.png";
+import impactImage from "../assets/1impact.webp";
+import productLoanImage from "../assets/product1.webp";
+import productTrainingImage from "../assets/fin_literacy2.webp";
+import productSupportImage from "../assets/image copy 4.webp";
 import customerServiceWeekImage from "../assets/customer-service-week.jpeg";
 
 const Button = ({ children, className = "", variant, ...props }) => {
@@ -172,6 +172,7 @@ const Homepage = () => {
                 <img
                   src={mergelogo}
                   alt="MERGE Seed"
+                  loading="lazy"
                   className="w-full max-w-md object-contain"
                 />
               </div>
@@ -270,6 +271,7 @@ const Homepage = () => {
               <img
                 src={impactImage}
                 alt="Impact"
+                loading="lazy"
                 className="w-full h-[400px] object-cover rounded-2xl "
               />
             </motion.div>

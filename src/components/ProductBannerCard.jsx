@@ -6,6 +6,7 @@ const ProductBannerCard = ({ title, tag, desc, image, alt }) => {
       <img
         src={image}
         alt={alt || title}
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-cover opacity-100"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/0 to-transparent" />
